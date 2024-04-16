@@ -26,3 +26,7 @@ class InputOutput:
         urls = [url.strip() for url in urls]
         return urls
     
+    def write_to_file(article, filename):
+        ##Write the article to a .txt file
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write(article)
