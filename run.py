@@ -12,6 +12,9 @@ from other.sk import sr_key
 openai.api_key = sr_key
 
 if __name__ == '__main__':
+
+    
+
     ## Read the URLs from the file
     urls = InputOutput.read_urls('other/urls.txt')
 
