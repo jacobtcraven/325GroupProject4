@@ -3,6 +3,7 @@
 ## Import needed classes and functions
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
+from module_3.Testing import Testing
 
 ## Import openai and api key
 import openai
@@ -13,7 +14,11 @@ openai.api_key = sr_key
 
 if __name__ == '__main__':
 
-    
+    ## Test that the file urls.txt exists and is accessible
+    Testing.test_url_text_exists()
+
+    ## Test that urls.txt contains urls and is readable
+    Testing.test_read_urls()
 
     ## Read the URLs from the file
     urls = InputOutput.read_urls('other/urls.txt')
