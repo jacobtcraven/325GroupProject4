@@ -26,6 +26,9 @@ if __name__ == '__main__':
     ## initialize counter for file naming
     counter = 1
 
+    ## Test that the scrape function works before looping
+    Testing.test_scrape_object()
+
     ## For each url, scrape the raw data, format it, and write it to a file
     # for URL in urls:
     for URL in urls:
@@ -33,6 +36,9 @@ if __name__ == '__main__':
 
         ## Write html to raw file
         InputOutput.write_to_file(str(source), f'Data/raw/raw{counter}.txt')
+
+        ## Test that the title of the article can be extracted and is a string
+        Testing.test_title()
 
         ## Get the title of the article
         title = FormatData.get_title(source)
