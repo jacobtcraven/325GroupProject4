@@ -1,0 +1,8 @@
+1. Validate that there is a URL in file
+2. Validate that URL contains "www."
+3. Validate that a Title was received
+4. Validate that html text was received
+5. Validate that scrape returns a beautifulsoup object
+6. Validate that read_urls returns a list of strings
+7. Validate that title is a string
+8. Validate that urls.txt exists
