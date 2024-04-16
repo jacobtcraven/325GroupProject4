@@ -1,5 +1,5 @@
 1. Validate that there is a URL in file
-2. Validate that URL contains "www."
+2. Validate that URL accessibility
 3. Validate that a Title was received
 4. Validate that html text was received
 5. Validate that scrape returns a beautifulsoup object
