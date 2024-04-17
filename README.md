@@ -140,6 +140,25 @@ __sk.py__: This file contains the API key to be used with OpenAI's API.
 
 __requirements.yml__: This file contains the conda environment to run the program.
 
+## Testing the Application
+
+This project includes a suite of automated tests to ensure the functionality and reliability of the web scraping and data processing features. The tests cover various aspects including URL validation, accessibility checks, title extraction, and content processing.
+
+### Running Tests
+
+To run the tests, use the following command in the terminal:
+    ```
+    python3 run.py --test
+    ```
+
+This command will execute a series of tests to validate:
+- **URL Format**: Checks if all URLs contain the correct 'http://' or 'https://' protocol.
+- **URL Accessibility**: Ensures each URL is accessible and returns a status code of 200, indicating successful HTTP requests.
+- **Title Extraction**: Verifies that the title is properly extracted from the HTML content of each URL.
+- **Content Extraction**: Tests the functionality of HTML content extraction, ensuring that the content is non-empty and correctly processed.
+
+These tests help identify any issues before the application processes large amounts of data or interacts with external APIs, thus preserving API usage limits and ensuring data accuracy.
+
 ------------------------------------------------------------------------------------------------------------
 
 ### Other important information
