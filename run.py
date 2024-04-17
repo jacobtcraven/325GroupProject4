@@ -9,8 +9,7 @@ import unittest
 ## Import openai and api key
 import openai
 from other.sk import sr_key
-import sys
-import unittest
+
 
 # Set the API key
 openai.api_key = sr_key
