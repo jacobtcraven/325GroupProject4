@@ -4,6 +4,7 @@
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
 from module_3.Testing import Testing, TestURLValidation, TestAccessibility, TestTitleExtraction, TestHTMLContentExtraction
+from Testing import Testing
 
 
 ## Import openai and api key
@@ -22,10 +23,10 @@ if __name__ == '__main__':
     Testing.test_read_urls()
 
     ## Test that the urls in urls.txt contain http or https
-    TestURLValidation.test_url_contains_http()
+    # TestURLValidation.test_url_contains_http()
 
     ## Test that the urls in urls.txt are accessible
-    TestAccessibility.test_url_accessibility()
+    # TestAccessibility.test_url_accessibility()
 
     ## Read the URLs from the file
     urls = InputOutput.read_urls('other/urls.txt')
@@ -41,7 +42,7 @@ if __name__ == '__main__':
     for URL in urls:
 
         ## Test that HTML content will be extracted
-        TestHTMLContentExtraction.test_html_content_extraction()
+        # TestHTMLContentExtraction.test_html_content_extraction()
 
         source = RawData.scrape(URL)
 
@@ -49,7 +50,7 @@ if __name__ == '__main__':
         InputOutput.write_to_file(str(source), f'Data/raw/raw{counter}.txt')
 
         ## Test that a title will be received
-        TestTitleExtraction.test_title_received()
+        # TestTitleExtraction.test_title_received()
 
         ## Test that the received title of the article is a string
         Testing.test_title()
@@ -95,3 +96,5 @@ if __name__ == '__main__':
 
         ## Increment counter so next url can be scraped and written to a new file
         counter += 1
+
+        unittest.main()

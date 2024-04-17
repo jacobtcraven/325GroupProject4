@@ -14,7 +14,7 @@ class Testing:
         assert isinstance(obj, BeautifulSoup)
     
     def test_read_urls():
-        urls = InputOutput.read_urls("urls.txt")
+        urls = InputOutput.read_urls("other/urls.txt")
         assert urls != None
         assert isinstance(urls, list)
         for url in urls:
