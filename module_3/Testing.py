@@ -1,4 +1,8 @@
 ## Import needed classes and functions
+import unittest
+import os
+import requests
+
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
 
