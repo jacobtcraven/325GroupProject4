@@ -3,6 +3,7 @@ import unittest
 import os
 import requests
 
+from bs4 import BeautifulSoup
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
 
@@ -10,6 +11,7 @@ class Testing:
     def test_scrape_object():
         obj = RawData.scrape("https://www.cnn.com/2024/04/16/sport/masters-no-phones-spt-intl/index.html")
         assert obj != None
+        assert isinstance(obj, BeautifulSoup)
     
     def test_read_urls():
         urls = InputOutput.read_urls("urls.txt")

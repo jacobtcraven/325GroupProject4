@@ -140,6 +140,26 @@ __sk.py__: This file contains the API key to be used with OpenAI's API.
 
 __requirements.yml__: This file contains the conda environment to run the program.
 
+## Testing Descriptions
+
+__Validate That urls.txt exists__: Checks that urls.txt exists in the correct position within folder structure.
+File: module_3/Testing.py
+Lines: 29-30
+
+__Validate that the title is a string__: Checks that the title recieved from html text is a string.
+File: module_3/Testing.py
+Lines: 23-27
+
+__Validate that read_urls() returns a list of strings__: Checks that the function read_urls() returns a list of strings.
+File: module_3/Testing.py
+Lines: 16-21
+
+__Validate that scrape returns a beautifulsoup object__: Checks that the scrape function returns a beautifulsoup object.
+File: module_3/Testing.py
+Lines: 11-14
+
+__Validate URL contains http or https__: Checks that the supplied URLs contain http:// or https://.
+
 ------------------------------------------------------------------------------------------------------------
 
 ### Other important information
