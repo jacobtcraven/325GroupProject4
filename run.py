@@ -4,15 +4,15 @@
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
 from module_3.Testing import Testing, TestURLValidation, TestAccessibility, TestTitleExtraction, TestHTMLContentExtraction
-
+import sys
+import unittest
 
 ## Import openai and api key
 import openai
 from other.sk import sr_key
 
 
-## Set the api key
-openai.api_key = sr_key
+
 
 def run_tests():
     # Create a test suite combining all test cases
@@ -26,7 +26,7 @@ def run_tests():
     runner = unittest.TextTestRunner()
     runner.run(suite)
 
-if __name__ == '__main__':
+def main():
 
     ## Test that the file urls.txt exists and is accessible
     Testing.test_url_text_exists()
