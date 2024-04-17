@@ -4,12 +4,14 @@
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
 from module_3.Testing import Testing, TestURLValidation, TestAccessibility, TestTitleExtraction, TestHTMLContentExtraction
-from Testing import Testing
+import unittest
+import Testing
 
 
 ## Import openai and api key
 import openai
 from other.sk import sr_key
+
 
 ## Set the api key
 openai.api_key = sr_key
@@ -97,4 +99,6 @@ if __name__ == '__main__':
         ## Increment counter so next url can be scraped and written to a new file
         counter += 1
 
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
