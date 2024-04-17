@@ -1,2 +1,2 @@
-## API Key
+##API key
 sr_key = 'sk-'
