@@ -3,7 +3,8 @@
 ## Import needed classes and functions
 from module_1.RawData import RawData, InputOutput
 from module_2.FormatData import FormatData
-from module_3.Testing import Testing
+from module_3.Testing import Testing, TestURLValidation, TestAccessibility, TestTitleExtraction, TestHTMLContentExtraction
+
 
 ## Import openai and api key
 import openai
@@ -20,6 +21,12 @@ if __name__ == '__main__':
     ## Test that urls.txt contains urls and is readable
     Testing.test_read_urls()
 
+    ## Test that the urls in urls.txt contain http or https
+    TestURLValidation.test_url_contains_http()
+
+    ## Test that the urls in urls.txt are accessible
+    TestAccessibility.test_url_accessibility()
+
     ## Read the URLs from the file
     urls = InputOutput.read_urls('other/urls.txt')
 
@@ -32,12 +39,19 @@ if __name__ == '__main__':
     ## For each url, scrape the raw data, format it, and write it to a file
     # for URL in urls:
     for URL in urls:
+
+        ## Test that HTML content will be extracted
+        TestHTMLContentExtraction.test_html_content_extraction()
+
         source = RawData.scrape(URL)
 
         ## Write html to raw file
         InputOutput.write_to_file(str(source), f'Data/raw/raw{counter}.txt')
 
-        ## Test that the title of the article can be extracted and is a string
+        ## Test that a title will be received
+        TestTitleExtraction.test_title_received()
+
+        ## Test that the received title of the article is a string
         Testing.test_title()
 
         ## Get the title of the article

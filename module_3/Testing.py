@@ -64,5 +64,3 @@ class TestHTMLContentExtraction(unittest.TestCase):
                 self.assertIsNotNone(content, f"No content was extracted for URL {url}")
                 self.assertNotEqual(content.strip(), '', f"Extracted content is empty for URL {url}")
 
-if __name__ == '__main__':
-    unittest.main()
