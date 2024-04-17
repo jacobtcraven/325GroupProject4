@@ -22,7 +22,7 @@ class Testing:
 
     def test_title():
         obj = RawData.scrape("https://www.cnn.com/2024/04/16/sport/masters-no-phones-spt-intl/index.html")
-        title = FormatData.title(obj)
+        title = FormatData.get_title(obj)
         assert title != None
         assert isinstance(title, str)
     
