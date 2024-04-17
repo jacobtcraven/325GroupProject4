@@ -96,3 +96,9 @@ if __name__ == '__main__':
 
         ## Increment counter so next url can be scraped and written to a new file
         counter += 1
+
+if __name__ == '__main__':
+    if '--test' in sys.argv:
+        run_tests()
+    else:
+        main()
