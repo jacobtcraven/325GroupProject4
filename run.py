@@ -14,6 +14,18 @@ from other.sk import sr_key
 ## Set the api key
 openai.api_key = sr_key
 
+def run_tests():
+    # Create a test suite combining all test cases
+    suite = unittest.TestSuite()
+    suite.addTest(unittest.makeSuite(TestURLValidation))
+    suite.addTest(unittest.makeSuite(TestAccessibility))
+    suite.addTest(unittest.makeSuite(TestTitleExtraction))
+    suite.addTest(unittest.makeSuite(TestHTMLContentExtraction))
+    
+    # Run the tests
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
+
 if __name__ == '__main__':
 
     ## Test that the file urls.txt exists and is accessible
